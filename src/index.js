@@ -221,11 +221,11 @@ var formatDate = (function() {
 function getItems(query) {
     var date = new Date(query || Date.now());
     var formats = [
-        formatDate(date, 'yyyymmdd-HHMMss'),
-        formatDate(date, 'yyyymmdd-HHMMssl'),
+        formatDate(date, 'yyyymmddHHMMssl'),
         formatDate(date, 'yyyy/mm/dd/HHMMss'),
         formatDate(date, 'yyyy/mm/dd/HHMMssl'),
-        formatDate(date, 'yyyy-mm-ddTHH:MM:ss.l'),
+        formatDate(date, 'yyyy-mm-dd\'T\'HH:MM:ss'),
+        formatDate(date, 'UTC:yyyy-mm-dd\'T\'HH:MM:ss\'Z\''),
         formatDate(date, 'yyyy-mm-dd HH:MM:ss.l')
     ];
     return formats.map(function(value) {
