@@ -226,13 +226,14 @@ function getItems(query) {
         formatDate(date, 'yyyy/mm/dd/HHMMssl'),
         formatDate(date, 'yyyy-mm-dd\'T\'HH:MM:ss'),
         formatDate(date, 'UTC:yyyy-mm-dd\'T\'HH:MM:ss\'Z\''),
-        formatDate(date, 'yyyy-mm-dd HH:MM:ss.l')
+        formatDate(date, 'yyyy-mm-dd HH:MM:ss.l'),
+        formatDate(date, 'yyyymmdd')
     ];
     return formats.map(function(value) {
         return {
             valid: true,
             title: value,
-            subtitle: 'enter to copy',
+            subtitle: 'Press enter to insert.',
             arg: value
         };
     });
